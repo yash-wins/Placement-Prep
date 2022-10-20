@@ -12,16 +12,16 @@ class Solution:
         for i in range(2,len(A),2):
             A[i] += A[i-2]
             A[i-1] = 0
-        
+
         if((len(A)-1) % 2 != 0 ):
-            A[len(A)-1] = 0
-            
+            A[len(A)-1] = 0 
+
         for i in range(1,len(A),2):  
             A[i] = A[i-1]
-        
+
         for i in range(len(B)):
             val = 0
             if(B[i][0]!=0):
-                val = A[B[i][0]-1];
+                val = A[B[i][0]-1]
             C[i] = A[B[i][1]] - val
         return C
