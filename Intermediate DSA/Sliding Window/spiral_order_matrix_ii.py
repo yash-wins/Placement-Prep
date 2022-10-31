@@ -5,7 +5,7 @@ class Solution:
 	# @return a list of list of integers
 	def generateMatrix(self, n):
             if n<=0:
-            return [] 
+                return [] 
 
             matrix=[row[:] for row in [[0]*n]*n]
         
