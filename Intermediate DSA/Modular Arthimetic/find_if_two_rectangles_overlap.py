@@ -20,3 +20,12 @@ class Solution:
         if D <= F or H <= B:
             return 0
         return 1
+    
+#Alternate Solution
+def solve(self, A, B, C, D, E, F, G, H):
+        def intersect(p_left, p_right, q_left, q_right):
+            return min(p_right, q_right) > max(p_left, q_left)
+        if (intersect(A, C, E, G) and intersect(B, D, F, H)):
+            return 1
+        else:
+            return 0
