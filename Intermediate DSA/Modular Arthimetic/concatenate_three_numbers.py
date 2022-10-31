@@ -23,3 +23,8 @@ class Solution:
                 return int(str(B)+str(A)+str(C))
             else:
                 return int(str(A)+str(B)+str(C))
+            
+#alternate solution
+class Solution:
+    def solve(self, A, B, C):
+        return int(''.join([str(x) for x in sorted([A, B, C])]))
