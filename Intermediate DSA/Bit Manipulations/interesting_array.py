@@ -3,3 +3,13 @@
 # We can merge two elements, P and Q, to one element, R, such that R = P ^ Q i.e., XOR of P and Q.
 # You have to determine whether it is possible to convert array A to size 1, containing a single element equal to 0 after several splits and/or merge?
 
+class Ans:
+    def solve(self, A):
+        ctr = 0
+        for i in range(len(A)):
+            if A[i] % 2 == 1:
+                ctr += 1
+        if ctr % 2 == 1:
+            return 'No'
+        else :
+            return 'Yes'
